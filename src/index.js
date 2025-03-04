@@ -36,12 +36,25 @@ try {
 
     console.log("\nContacts Sorted Alphabetically:");
     console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Name:");
+    console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by City:");
+    console.log(addressBook.sortContactsByCity().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by State:");
+    console.log(addressBook.sortContactsByState().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Zip:");
+    console.log(addressBook.sortContactsByZip().map(contact => contact.toString()).join("\n"));
+
 } catch (error) {
     console.error("Error:", error.message);
 }
 try {
     const invalidContact = new Contact(
-        "an", "son", "abc", "In", "I", "100A01", "12345", "invalid-email"
+        "ga", "th", "abc", "In", "I", "100A01", "12345", "invalid-email"
     );
     console.log(addressBook.addContact(invalidContact));
 } catch (error) {
