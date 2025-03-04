@@ -23,14 +23,18 @@ try {
     const duplicateContact = new Contact(
         "Garima", "Thakur", "Bhopal", "India", "In", "100001", "9876543210", "garimathakur@gmail.com"
     );
-    console.log(addressBook.addContact(duplicateContact)); 
+    console.log(addressBook.addContact(duplicateContact));  
+
+    console.log("Contacts in India:");
+    console.log(addressBook.searchByCityOrState("India"));
+
 } catch (error) {
     console.error("Error:", error.message);
 }
 
 try {
     const invalidContact = new Contact(
-        "jn", "sn", "abc", "In", "I", "100A01", "12345", "invalid-email"
+        "on", "ion", "abc", "In", "I", "100A01", "12345", "invalid-email"
     );
     console.log(addressBook.addContact(invalidContact));
 } catch (error) {
