@@ -16,7 +16,7 @@ try {
     console.log("All Contacts Before editing", addressBook.getAllContacts());
     console.log(addressBook.editContact("Ria", { address: "Seoni", city: "New York", phone: "9234567890" }));
     console.log("All Contacts After editing", addressBook.getAllContacts());
-    console.log(addressBook.deleteContact("Rakesh"));
+    console.log(addressBook.deleteContact("Ria"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
     console.log("Total Contacts:", addressBook.countContacts()); 
 
@@ -31,13 +31,15 @@ try {
     console.log("Viewing Persons by City or State:");
     console.log(addressBook.viewPersonsByCityOrState());
 
+    console.log("Count of Contacts by City and State:");
+    console.log(addressBook.countByCityOrState());
 } catch (error) {
     console.error("Error:", error.message);
 }
 
 try {
     const invalidContact = new Contact(
-        "aim", "er", "abc", "In", "I", "100A01", "12345", "invalid-email"
+        "ga", "thk", "abc", "In", "I", "100A01", "12345", "invalid-email"
     );
     console.log(addressBook.addContact(invalidContact));
 } catch (error) {
